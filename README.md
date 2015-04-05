@@ -4,15 +4,15 @@ Parse XML Document into My own format using dom4j
 # format：
 
 
-	private String name; 
+private String name; 
 	
-	private String value;
+private String value;
 
-	//child nodes
-	private List<XmlElement> childList;
+//child nodes
+private List<XmlElement> childList;
 	
-        //node properties
-	private Map<String,String> propMap = new HashMap<String,String>(); 
+//node properties
+private Map<String,String> propMap = new HashMap<String,String>(); 
 
 
 # Meaning
