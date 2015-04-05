@@ -1,5 +1,3 @@
-package com.taobao.top.tasp.biz.doc.util;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +8,8 @@ public class XmlElement {
 	private String name;
 	
 	private String value;
+	
+	private String arrayItemName ;
 	
 	private List<XmlElement> childList;
 
@@ -37,6 +37,17 @@ public class XmlElement {
 			return null;
 		for(XmlElement xmlElement : childList){
 			if(xmlElement.getName().equals(name)){
+				return xmlElement;
+			}
+		}
+		return null;
+	}
+	
+	public XmlElement getChildXmlElementByPropsNameAndValue(String name,String value){
+		if(childList == null)
+			return null;
+		for(XmlElement xmlElement : childList){
+			if(xmlElement.getPropsValue(name) != null &&xmlElement.getPropsValue(name).equals(value)){
 				return xmlElement;
 			}
 		}
@@ -77,5 +88,13 @@ public class XmlElement {
 
 	public void setValue(String value) {
 		this.value = value;
+	}
+
+	public String getArrayItemName() {
+		return arrayItemName;
+	}
+
+	public void setArrayItemName(String arrayItemName) {
+		this.arrayItemName = arrayItemName;
 	}
 }

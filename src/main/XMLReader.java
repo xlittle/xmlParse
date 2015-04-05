@@ -1,13 +1,9 @@
-package com.taobao.top.tasp.biz.doc.util;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map.Entry;
-import java.util.Set;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -18,33 +14,6 @@ import org.xml.sax.InputSource;
 
 public class XMLReader {
 	
-	public static void main(String[] args) throws Exception{	    
-	    XmlElement root = getXmlElementFromXmlFile("/Users/xt/Downloads/t.xml",true);
-	    
-	    disPlayXmlElement(root,0);
-	}
-
-	public static void disPlayXmlElement(XmlElement root,int level) {
-		for(int i = 0; i < level; i++){
-			System.out.print("-");
-		}
-		System.out.print(root.getName()+"  ");
-	    //输出属性
-	    if(root.getPropMap() != null){
-	    	Set<Entry<String,String>>entrySet =  root.getPropMap().entrySet();
-	    	for(Entry<String,String> entry : entrySet){
-	    		System.out.print(entry.getKey()+"--->"+entry.getValue()+"  ");
-	    	}
-	    }
-	    System.out.println();
-	    if(root.getChildList() != null){
-	    	List<XmlElement> childXmlElementList = root.getChildList();
-	    	for(XmlElement xmlElement : childXmlElementList){
-	    		disPlayXmlElement(xmlElement,level+1);
-	    	}
-	    }
-//	    System.out.println(root.getValue());
-	}
 	/**
 	 * 从文件中读取
 	 * @param filePath
@@ -56,30 +25,20 @@ public class XMLReader {
 		Document doc=null;
 	    SAXReader reader=new SAXReader();
 	    doc=reader.read(new File(filePath));
-	    return getXmlElementFromDocument(doc,isSimplify);
-	}
-	/**
-	 * 从Document中读取
-	 * @param filePath
-	 * @return
-	 * @throws IOException
-	 * @throws DocumentException
-	 */
-	public static XmlElement getXmlElementFromDocument(Document doc,boolean isSimplify) throws IOException, DocumentException{
+	    
+	    XmlElement rootXmlElement = new XmlElement();
+	    Element root = doc.getRootElement();
+	    
+	    rootXmlElement.setName(root.getName());
+	    fillElementPropsList(root,rootXmlElement);
 		
-		XmlElement rootXmlElement = new XmlElement();
-		Element root = doc.getRootElement();
-		
-		rootXmlElement.setName(root.getName());
-		fillElementPropsList(root,rootXmlElement);
-		
-		if(root.elements().size() > 0){
-			List<XmlElement> childXmlElementList = getXmlElementList(getSimplifyChildList(rootXmlElement,root,isSimplify),isSimplify);
-			rootXmlElement.setChildList(childXmlElementList);
-		}else{
-			rootXmlElement.setValue(root.getText());
-		}
-		return rootXmlElement;
+    	if(root.elements().size() > 0){
+    		List<XmlElement> childXmlElementList = getXmlElementList(getSimplifyChildList(rootXmlElement,root,isSimplify),isSimplify);
+    		rootXmlElement.setChildList(childXmlElementList);
+    	}else{
+    		rootXmlElement.setValue(root.getText());
+    	}
+    	return rootXmlElement;
 	}
 	
 	/**

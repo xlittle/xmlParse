@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<method>
+	<methodCall name="doTradeFullinfoGet" apiName="taobao.trade.fullinfo.get">
+		<params>
+			<param type="com.taobao.tradeapi.domain.query.TradeQuery">
+				<type>
+					<struct>
+						<member name="fields" type="string list" apiName="fields"/>
+						<member name="tid" type="java.lang.Long" apiName="tid"/>
+						<member name="appKey" type="string" apiName="$app_key"/>
+						<member name="isAcookie" type="java.lang.Boolean" apiName="is_acookie"/>
+					</struct>
+				</type>
+			</param>
+			<param type="java.lang.Long" apiName="$session_uid"/>
+		</params>
+	</methodCall>
+	<methodResponse>
+		<param exceptionExpress="error=true,errorCode,errorMsg">
+			<type>
+				<struct>
+					<member name="firstResult" apiName="trade">
+						<type>
+							<struct>
+								<member name="sellerNick" apiName="seller_nick" apiType="string"/>
+								<member name="buyerNick" apiName="buyer_nick" apiType="string"/>
+								<member name="buyerId" apiName="buyer_id" apiType="string"/>
+								<member name="title" apiName="title" apiType="string"/>
+								<member name="type" apiName="type" apiType="string"/>
+								<member name="created" apiName="created" apiType="java.util.Date"/>
+								<member name="sid" apiName="sid" apiType="string"/>
+								<member name="tid" apiName="tid" apiType="java.lang.Long"/>
+								<member name="acookieId" apiName="acookie_id" apiType="string"/>
+								<member name="sellerRate" apiName="seller_rate" apiType="java.lang.Boolean"/>
+								<member name="buyerRate" apiName="buyer_rate" apiType="java.lang.Boolean"/>
+								<member name="status" apiName="status" apiType="string"/>
+								<member name="payment" apiName="payment" apiType="string"/>
+								<member name="discountFee" apiName="discount_fee" apiType="string"/>
+								<member name="adjustFee" apiName="adjust_fee" apiType="string"/>
+								<member name="postFee" apiName="post_fee" apiType="string"/>
+								<member name="totalFee" apiName="total_fee" apiType="string"/>
+								<member name="payTime" apiName="pay_time" apiType="java.util.Date"/>
+								<member name="endTime" apiName="end_time" apiType="java.util.Date"/>
+								<member name="modified" apiName="modified" apiType="java.util.Date"/>
+								<member name="consignTime" apiName="consign_time" apiType="string"/>
+								<member name="receivedPayment" apiName="received_payment" apiType="string"/>
+								<member name="commissionFee" apiName="commission_fee" apiType="string"/>
+								<member name="buyerMemo" apiName="buyer_memo" apiType="string"/>
+								<member name="sellerMemo" apiName="seller_memo" apiType="string"/>
+								<member name="buyerArea" apiName="buyer_area" apiType="string"/>
+								<member name="alipayNo" apiName="alipay_no" apiType="string"/>
+								<member name="alipayId" apiName="alipay_id" apiType="java.lang.Long"/>
+								<member name="buyerMessage" apiName="buyer_message" apiType="string"/>
+								<member name="picPath" apiName="pic_path" apiType="string"/>								
+								<member name="numIid" apiName="num_iid" apiType="java.lang.Long"/>
+								<member name="price" apiName="price" apiType="string"/>
+								<member name="codFee" apiName="cod_fee" apiType="string"/>
+								<member name="codStatus" apiName="cod_status" apiType="string"/>
+								<member name="buyerCodFee" apiName="buyer_cod_fee" apiType="string"/>
+								<member name="sellerCodFee" apiName="seller_cod_fee" apiType="string"/>
+								<member name="expressAgencyFee" apiName="express_agency_fee" apiType="string"/>
+								<member name="shippingType" apiName="shipping_type" apiType="string"/>
+								<member name="num" apiName="num" apiType="java.lang.Integer"/>
+								<member name="pointFee" apiName="point_fee" apiType="java.lang.Integer"/>
+								<member name="realPointFee" apiName="real_point_fee" apiType="java.lang.Integer"/>
+								<member name="buyerObtainPointFee" apiName="buyer_obtain_point_fee" apiType="java.lang.Integer"/>
+								<member name="buyerAlipayNo" apiName="buyer_alipay_no" apiType="string"/>
+								<member name="receiverName" apiName="receiver_name" apiType="string"/>
+								<member name="receiverCountry" apiName="receiver_country" apiType="string"/>
+								<member name="receiverState" apiName="receiver_state" apiType="string"/>
+								<member name="receiverCity" apiName="receiver_city" apiType="string"/>
+								<member name="receiverDistrict" apiName="receiver_district" apiType="string"/>
+								<member name="receiverTown" apiName="receiver_town" apiType="string"/>
+								<member name="receiverAddress" apiName="receiver_address" apiType="string"/>
+								<member name="receiverZip" apiName="receiver_zip" apiType="string"/>
+								<member name="receiverMobile" apiName="receiver_mobile" apiType="string"/>
+								<member name="receiverPhone" apiName="receiver_phone" apiType="string"/>
+								<member name="buyerEmail" apiName="buyer_email" apiType="string"/>
+								<member name="sellerAlipayNo" apiName="seller_alipay_no" apiType="string"/>
+								<member name="sellerMobile" apiName="seller_mobile" apiType="string"/>
+								<member name="sellerPhone" apiName="seller_phone" apiType="string"/>
+								<member name="sellerName" apiName="seller_name" apiType="string"/>
+								<member name="sellerEmail" apiName="seller_email" apiType="string"/>
+								<member name="availableConfirmFee" apiName="available_confirm_fee" apiType="string"/>
+								<member name="hasPostFee" apiName="has_post_fee" apiType="java.lang.Boolean"/>
+								<member name="timeoutActionTime" apiName="timeout_action_time" apiType="java.util.Date"/>
+								<member name="snapshotUrl" apiName="snapshot_url" apiType="string"/>
+								<member name="tradeMemo" apiName="trade_memo" apiType="string"/>
+								<member name="promotion" apiName="promotion" apiType="string"/>
+								<member name="is3D" apiName="is_3D" apiType="java.lang.Boolean"/>
+								<member name="isLgtype" apiName="is_lgtype" apiType="java.lang.Boolean"/>
+								<member name="isBrandSale" apiName="is_brand_sale" apiType="java.lang.Boolean"/>
+								<member name="isForceWlb" apiName="is_force_wlb" apiType="java.lang.Boolean"/>
+								<member name="buyerFlag" apiName="buyer_flag" apiType="java.lang.Integer"/>
+								<member name="sellerFlag" apiName="seller_flag" apiType="java.lang.Integer"/>
+								<member name="creditCardFee" apiName="credit_card_fee" apiType="string"/>
+								<member name="stepTradeStatus" apiName="step_trade_status" apiType="string"/>
+								<member name="stepPaidFee" apiName="step_paid_fee" apiType="string"/>
+								<member name="eticketExt" apiName="eticket_ext" apiType="string"/>
+								<member name="markDesc" apiName="mark_desc" apiType="string"/>
+								<member name="hasYfx" apiName="has_yfx" apiType="java.lang.Boolean"/>
+								<member name="yfxFee" apiName="yfx_fee" apiType="string"/>
+								<member name="yfxId" apiName="yfx_id" apiType="string"/>
+								<member name="yfxType" apiName="yfx_type" apiType="string"/>
+								<member name="sendTime" apiName="send_time" apiType="string"/>
+								<member name="canRate" apiName="can_rate" apiType="java.lang.Boolean"/>
+								<member name="sellerCanRate" apiName="seller_can_rate" apiType="java.lang.Boolean"/>
+								<member name="isPartConsign" apiName="is_part_consign" apiType="java.lang.Boolean"/>
+								<member name="isDaixiao" apiName="is_daixiao" apiType="java.lang.Boolean"/>
+								<member name="isWt" apiName="is_wt" apiType="java.lang.Boolean"/>
+								<member name="arriveInterval" apiName="arrive_interval" apiType="java.lang.Integer"/>
+								<member name="arriveCutTime" apiName="arrive_cut_time" apiType="string"/>
+								<member name="consignInterval" apiName="consign_interval" apiType="java.lang.Integer"/>
+                                <member name="o2o" apiName="o2o" apiType="string"/>
+                                <member name="o2oGuideId" apiName="o2o_guide_id" apiType="string"/>
+                                <member name="o2oGuideName" apiName="o2o_guide_name" apiType="string"/>
+                                <member name="o2oShopId" apiName="o2o_shop_id" apiType="string"/>
+                                <member name="o2oShopName" apiName="o2o_shop_name" apiType="string"/>
+                                <member name="o2oDelivery" apiName="o2o_delivery" apiType="string"/>
+                                <member name="o2oOutTradeId" apiName="o2o_out_trade_id" apiType="string"/>
+                                <member name="shopCode" apiName="shop_code" apiType="string"/>
+                                <member name="hkEnName" apiName="hk_en_name" apiType="string"/>
+								<member name="hkFlightNo" apiName="hk_flight_no" apiType="string"/>
+								<member name="hkChinaName" apiName="hk_china_name" apiType="string"/>
+								<member name="hkCardCode" apiName="hk_card_code" apiType="string"/>
+								<member name="hkCardType" apiName="hk_card_type" apiType="string"/>
+								<member name="hkFlightDate" apiName="hk_flight_date" apiType="string"/>
+								<member name="hkGender" apiName="hk_gender" apiType="string"/>
+								<member name="hkBirthday" apiName="hk_birthday" apiType="string"/>
+								<member name="hkPickup" apiName="hk_pickup" apiType="string"/>
+								<member name="hkPickupId" apiName="hk_pickup_id" apiType="string"/>
+								<member name="estConTime" apiName="est_con_time" apiType="string"/>
+								<member name="invoiceKind" apiName="invoice_kind" apiType="string"/>
+								<member name="orders" apiName="orders">
+									<type>
+										<array apiArrayItemName="order">
+											<type>
+												<struct>
+													<member name="title" apiName="title" apiType="string"/>
+													<member name="picPath" apiName="pic_path" apiType="string"/>
+													<member name="price" apiName="price" apiType="string"/>													
+													<member name="numIid" apiName="num_iid" apiType="java.lang.Long"/>
+													<member name="skuId" apiName="sku_id" apiType="string"/>
+													<member name="outerIid" apiName="outer_iid" apiType="string"/>
+													<member name="outerSkuId" apiName="outer_sku_id" apiType="string"/>
+													<member name="refundStatus" apiName="refund_status" apiType="string"/>
+													<member name="status" apiName="status" apiType="string"/>
+													<member name="oid" apiName="oid" apiType="java.lang.Long"/>
+													<member name="totalFee" apiName="total_fee" apiType="string"/>
+													<member name="payment" apiName="payment" apiType="string"/>
+													<member name="discountFee" apiName="discount_fee" apiType="string"/>
+													<member name="adjustFee" apiName="adjust_fee" apiType="string"/>
+													<member name="divideOrderFee" apiName="divide_order_fee" apiType="string"/>
+													<member name="partMjzDiscount" apiName="part_mjz_discount" apiType="string"/>
+													<member name="skuPropertiesName" apiName="sku_properties_name" apiType="string"/>
+													<member name="itemMealId" apiName="item_meal_id" apiType="java.lang.Long"/>
+													<member name="itemMealName" apiName="item_meal_name" apiType="string"/>
+													<member name="num" apiName="num" apiType="java.lang.Integer"/>
+													<member name="snapshotUrl" apiName="snapshot_url" apiType="string"/>
+													<member name="timeoutActionTime" apiName="timeout_action_time" apiType="java.util.Date"/>
+													<member name="itemMemo" apiName="item_memo" apiType="string"/>
+													<member name="buyerRate" apiName="buyer_rate" apiType="java.lang.Boolean"/>
+													<member name="sellerRate" apiName="seller_rate" apiType="java.lang.Boolean"/>
+													<member name="refundId" apiName="refund_id" apiType="java.lang.Long"/>
+													<member name="sellerType" apiName="seller_type" apiType="string"/>
+													<member name="cid" apiName="cid" apiType="java.lang.Long"/>
+													<member name="isOversold" apiName="is_oversold" apiType="java.lang.Boolean"/>
+													<member name="endTime" apiName="end_time" apiType="java.util.Date"/>
+													<member name="orderFrom" apiName="order_from" apiType="string"/>
+													<member name="isServiceOrder" apiName="is_service_order" apiType="java.lang.Boolean"/>
+													<member name="consignTime" apiName="consign_time" apiType="java.util.Date"/>
+													<member name="shippingType" apiName="shipping_type" apiType="string"/>
+													<member name="logisticsCompany" apiName="logistics_company" apiType="string"/>
+													<member name="invoiceNo" apiName="invoice_no" apiType="string"/>
+													<member name="bindOid" apiName="bind_oid" apiType="java.lang.Long"/>
+													<member name="isDaixiao" apiName="is_daixiao" apiType="java.lang.Boolean"/>
+													<member name="ticketOuterId" apiName="ticket_outer_id" apiType="string"/>
+													<member name="ticketExpdateKey" apiName="ticket_expdate_key" apiType="string"/>
+													<member name="isWww" apiName="is_www" apiType="java.lang.Boolean"/>
+													<member name="storeCode" apiName="store_code" apiType="string"/>
+													<member name="tmserSpuCode" apiName="tmser_spu_code" apiType="string"/>
+												</struct>
+											</type>
+										</array>
+									</type>
+								</member>
+								<member name="promotionDetails" apiName="promotion_details">
+									<type>
+										<array apiArrayItemName="promotion_detail">
+											<type>
+												<struct>
+													<member name="id" apiName="id" apiType="java.lang.Long"/>
+													<member name="promotionName" apiName="promotion_name" apiType="string"/>
+													<member name="discountFee" apiName="discount_fee" apiType="string"/>
+													<member name="giftItemName" apiName="gift_item_name" apiType="string"/>
+													<member name="giftItemId" apiName="gift_item_id" apiType="string"/>
+													<member name="giftItemNum" apiName="gift_item_num" apiType="string"/>
+													<member name="promotionDesc" apiName="promotion_desc" apiType="string"/>
+													<member name="promotionId" apiName="promotion_id" apiType="string"/>
+												</struct>
+											</type>
+										</array>
+									</type>
+								</member>
+                                <member name="serviceTags" apiName="service_tags">
+                                    <type>
+                                        <array apiArrayItemName="logistics_tag">
+                                            <type>
+                                                <struct>
+                                                    <member name="orderId" apiName="order_id" apiType="string"/>
+                                                    <member name="logisticServiceTagList" apiName="logistic_service_tag_list">
+                                                        <type>
+                                                            <array apiArrayItemName="logistic_service_tag">
+                                                                <type>
+                                                                    <struct>
+                                                                        <member name="serviceTag" apiName="service_tag" apiType="string"/>
+                                                                        <member name="serviceType" apiName="service_type" apiType="string"/>
+                                                                    </struct>
+                                                                </type>
+                                                            </array>
+                                                        </type>
+                                                    </member>
+                                                </struct>
+                                            </type>
+                                        </array>
+                                    </type>
+                                </member>
+								<member name="serviceOrders" apiName="service_orders">
+											<type>
+												<array apiArrayItemName="service_order">
+													<type>
+														<struct>
+															<member name="oid" apiName="oid" apiType="java.lang.Long"/>
+															<member name="itemOid" apiName="item_oid" apiType="java.lang.Long"/>
+															<member name="serviceId" apiName="service_id" apiType="java.lang.Long"/>
+															<member name="serviceDetailUrl" apiName="service_detail_url" apiType="string"/>
+															<member name="num" apiName="num" apiType="java.lang.Integer"/>
+															<member name="price" apiName="price" apiType="string"/>															
+															<member name="payment" apiName="payment" apiType="string"/>
+															<member name="title" apiName="title" apiType="string"/>
+															<member name="totalFee" apiName="total_fee" apiType="string"/>
+															<member name="buyerNick" apiName="buyer_nick" apiType="string"/>
+															<member name="refundId" apiName="refund_id" apiType="java.lang.Long"/>
+															<member name="sellerNick" apiName="seller_nick" apiType="string"/>
+															<member name="picPath" apiName="pic_path" apiType="string"/>
+															<member name="tmserSpuCode" apiName="tmser_spu_code" apiType="string"/>
+														</struct>
+													</type>
+												</array>
+											</type>
+										</member>
+								<member name="invoiceName" apiName="invoice_name" apiType="string"/>
+								<member name="invoiceType" apiName="invoice_type" apiType="string"/>
+								<member name="buyerIp" apiName="buyer_ip" apiType="string"/>
+                                <member name="tradeFrom" apiName="trade_from" apiType="string"/>
+                                <member name="tradeSource" apiName="trade_source" apiType="string"/>
+                                <member name="zeroPurchase" apiName="zero_purchase" apiType="java.lang.Boolean"/>
+                                <member name="alipayPoint" apiName="alipay_point" apiType="java.lang.Long"/>
+                                <member name="pccAf" apiName="pcc_af" apiType="java.lang.Long"/>
+                                <member name="tradeExt" apiName="trade_ext">
+                                    <type>
+                                        <struct>
+                                            <member name="beforeEnableFlag" apiName="before_enable_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeCloseFlag" apiName="before_close_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforePayFlag" apiName="before_pay_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeShipFlag" apiName="before_ship_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeConfirmFlag" apiName="before_confirm_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeRateFlag" apiName="before_rate_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeRefundFlag" apiName="before_refund_flag" apiType="java.lang.Integer"/>
+                                            <member name="beforeModifyFlag" apiName="before_modify_flag" apiType="java.lang.Integer"/>
+                                            <member name="thirdPartyStatus" apiName="third_party_status" apiType="java.lang.Integer"/>
+                                            <member name="extraData" apiName="extra_data" apiType="string"/>
+                                            <member name="extAttributes" apiName="ext_attributes" apiType="string"/>
+                                        </struct>
+                                    </type>
+                                </member>
+                            </struct>
+						</type>
+					</member>
+				</struct>
+			</type>
+		</param>
+	</methodResponse>
+</method>
