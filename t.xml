@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <method>
-	<methodCall name="doTradeFullinfoGet" apiName="taobao.trade.fullinfo.get">
+	<methodCall name="fullinfoGet" apiName="info.get">
 		<params>
 			<param type="com.taobao.tradeapi.domain.query.TradeQuery">
 				<type>
