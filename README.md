@@ -8,11 +8,7 @@ private String name;
 	
 private String value;
 
-//child nodes
-
 private List<XmlElement> childList;
-	
-//node properties
 
 private Map<String,String> propMap = new HashMap<String,String>(); 
 
